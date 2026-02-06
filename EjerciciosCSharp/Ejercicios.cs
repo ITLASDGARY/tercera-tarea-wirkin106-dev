@@ -23,7 +23,10 @@ namespace EjerciciosCSharp
             string resultado = "";
             
             // TU CÓDIGO AQUÍ
-            
+            for (int i = 1; i <= 12; i++)
+            {
+                resultado += numero + " x " + i + " = " + (numero * i) + "\n";
+            }
             return resultado;
         }
 
@@ -49,6 +52,12 @@ namespace EjerciciosCSharp
             string entrada = "";
             
             // TU CÓDIGO AQUÍ (usa do-while)
+            do
+            {
+               entrada = obtenerInput();
+               intentos++;
+            }
+            while (entrada != claveSecreta);
             
             return intentos;
         }
@@ -73,6 +82,14 @@ namespace EjerciciosCSharp
             int suma = 0;
             
             // TU CÓDIGO AQUÍ (usa while o foreach con break)
+            foreach (int numero in numeros)
+            {
+                if (numero == 0)
+            {
+                    break;
+            }
+            suma += numero;
+            }
             
             return suma;
         }
@@ -96,6 +113,15 @@ namespace EjerciciosCSharp
             string resultado = "";
             
             // TU CÓDIGO AQUÍ (usa for con i+=2)
+
+            for (int i = 0; i <= 50; i += 2)
+            {
+                   if (i > 0)
+               {
+                   resultado += ", ";
+               }
+               resultado += i;
+            }
             
             return resultado;
         }
